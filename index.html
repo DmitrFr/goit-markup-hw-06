@@ -60,7 +60,12 @@
             <div class="modal">
               <button class="modal__button" data-modal-close></button>
               <p class="modal__title">Leave your contacts and we will call you back</p>
-              <form class="modal-form">
+              <form
+                autocomplete="off"
+                method="POST"
+                action="javascript:void(0);"
+                class="modal-form"
+              >
                 <label class="modal-form__label">
                   <span class="modal-form__text">Name</span>
                   <div class="modal-form__wrapper">
@@ -463,7 +468,7 @@
         </div>
         <div class="wrapper--third">
           <p class="subscribe">subscribe</p>
-          <form class="footer-form">
+          <form autocomplete="off" method="POST" action="javascript:void(0);" class="footer-form">
             <input
               class="footer-form__input"
               name="subscribe-email"
