@@ -16,7 +16,7 @@
   --transition-duration: 250ms;
 }
 
-/* Reset */
+/* ========== Reset ========== */
 h1,
 h2,
 h3,
@@ -72,7 +72,7 @@ body {
   padding-top: 120px;
 }
 
-/* hidden elements class */
+/* ========== hidden elements class ========== */
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -86,7 +86,7 @@ body {
   margin: -1px;
 }
 
-/* Header */
+/* ========== Header ========== */
 .header {
   border-bottom: 1px solid var(--color__cornflower);
 }
@@ -169,7 +169,7 @@ body {
   color: var(--color__ocean);
 }
 
-/* Footer */
+/* ========== Footer ========== */
 .footer {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -280,7 +280,7 @@ body {
   background-color: var(--color__ocean);
 }
 
-/* Main section */
+/* ========== Main section ========== */
 .main-section {
   padding-top: 188px;
   padding-bottom: 188px;
@@ -348,13 +348,15 @@ body {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
 }
+
+/* ========== Modal Window ========== */
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   min-width: 408px;
   min-height: 576px;
-  padding: 24px;
+  padding: 72px 24px 24px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -366,8 +368,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  margin-left: auto;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   background-color: var(--color__cornflower);
@@ -405,7 +408,6 @@ body {
   border-color: var(--color__white);
 }
 .modal__title {
-  margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -418,6 +420,10 @@ body {
   display: block;
   margin-bottom: 8px;
 }
+.modal-form__label--last {
+  display: block;
+  margin-bottom: 16px;
+}
 .modal-form__wrapper {
   position: relative;
 }
@@ -426,8 +432,10 @@ body {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+  transition: fill var(--transition-duration) var(--cubic-bezier);
 }
 .modal-form__text {
+  display: inline-block;
   margin-bottom: 4px;
   font-size: 12px;
   letter-spacing: 0.01em;
@@ -436,6 +444,7 @@ body {
 }
 .modal-form__input {
   width: 100%;
+  height: 40px;
   padding: 11px 38px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -450,7 +459,7 @@ body {
 .modal-form__input:hover + svg {
   fill: var(--color__iris);
 }
-.modal-form__label textarea {
+.modal-form__label--last textarea {
   width: 100%;
   height: 120px;
   padding: 8px 16px;
@@ -459,12 +468,13 @@ body {
   border-radius: 4px;
   background-color: transparent;
   transition: border-color var(--transition-duration) var(--cubic-bezier);
+  outline: none;
 }
-.modal-form__label textarea:hover,
-.modal-form__label textarea:focus {
+.modal-form__label--last textarea:hover,
+.modal-form__label--last textarea:focus {
   border-color: var(--color__iris);
 }
-.modal-form__label textarea::placeholder {
+.modal-form__label--last textarea::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -538,7 +548,7 @@ body {
   color: var(--color__white);
 }
 
-/* Features section */
+/* ========== Features section ========== */
 .features {
   display: flex;
   gap: 24px;
@@ -569,7 +579,7 @@ body {
   font-size: 16px;
 }
 
-/* What are we doing */
+/* ========== What are we doing ========== */
 .our-work {
   padding-bottom: 120px;
 }
@@ -588,7 +598,7 @@ body {
   justify-content: space-between;
 }
 
-/* Our team */
+/* ========== Our team ========== */
 .our-team {
   padding-bottom: 120px;
   background-color: var(--color__cloud);
@@ -652,7 +662,7 @@ body {
   background-color: var(--color__ocean);
 }
 
-/* Customers */
+/* ========== Customers ========== */
 .customers {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -690,7 +700,7 @@ body {
   fill: currentColor;
 }
 
-/* Portfolio */
+/* ========== Portfolio ========== */
 .portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
